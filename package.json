@@ -1,7 +1,7 @@
 {
-  "name": "untitled",
+  "name": "insert-array-immutable",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "description": "",
   "main": "lib/index.js",
   "types": "lib/",
@@ -13,7 +13,7 @@
     "test": "tests"
   },
   "scripts": {
-    "prepublishOnly": "npm run build && npm run test",
+    "prepublishOnly": "npm run build && npm run test && npm run docs",
     "build": "del lib && del .buildcache && tsc",
     "build:watch": "del lib && del .buildcache && tsc --watch",
     "nodemon": "./node_modules/.bin/nodemon",
@@ -34,7 +34,12 @@
     "url": "https://github.com/ivandotv/node-module-ts/issues"
   },
   "homepage": "https://github.com/ivandotv/node-module-ts#readme",
-  "keywords": [],
+  "keywords": [
+    "immutable",
+    "redux",
+    "array update",
+    "array replace"
+  ],
   "author": "Ivan Vlatkovic",
   "jest-junit": {
     "outputDirectory": "./reports/junit",

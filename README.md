@@ -1,62 +1,84 @@
-# TypeScript Node Module Template
+# Insert Items Immutable
 
-Opinionated template repository for starting new node modules with typescript.
+[![CircleCI](https://img.shields.io/circleci/build/github/ivandotv/insert-array-immutable
+/master)](https://circleci.com/gh/ivandotv/jme)
+[![Codecov](https://img.shields.io/codecov/c/github/ivandotv/insert-array-immutable)](https://codecov.io/gh/ivandotv/insert-array-immutable)
+[![NPM](https://img.shields.io/npm/l/insert-array-immutable)](https://www.npmjs.com/package/insert-array-immutable)
 
-## Getting Started
+## Why You Might Need This
 
-You can immediately create your repo by clicking on the `Use this template` button in the Github page ui.
-Or you can use [deGit](https://github.com/Rich-Harris/degit) which is a very convenient tool to quickly download the repository `degit https://github.com/ivandotv/node-module-typescript`
+When working with redux you need to use [immutable update patterns](https://redux.js.org/recipes/structuring-reducers/immutable-update-patterns/).
 
-### Then
+So when you need to insert a specific item or items into an array at a specific index...
 
-1. Run `npm outdated` for minor updates, or you can run `npx npm-check-updates` to see if any packages need major upgrades.
-2. Run `npm install`
+Instead of this (or something like this):
 
-## What's Inside
+```js
+case 'SOME_ACTION':
+   return {
+       ...state,
+       myArray: [
+          ...state.myArray.slice(0,index),
+          {name:'Jack'},
+         ...state.myArray.slice(index+1)
+         ]
+    }
+```
 
-- Typescript is set to `strict` configuration with source map generation.
-- ESLint is set up to use [standardJS configuration](https://standardjs.com/index.html#typescript) for typescript.
-- with a few overrides which I think are common sense. You can see the overrides inside the [.eslintrc.js](.eslintrc.js) file.
-- Unit testing is done via [Jest](https://jestjs.io/) in combination with [ts-jest](https://kulshekhar.github.io/ts-jest)
-- [Prettier](https://prettier.io/) with a [few custom rules](.prettier.rc).
-- Code coverage.
+you can do this:
 
-### Tasks
+```js
+case 'SOME_ACTION':
+   return {
+       ...state,
+       myArray: insertIntoArray(myArray,index,{name:'Jack'})
+    }
+```
 
-- `prepublishOnly`: run before publishing the module to npm.
-- `build`: build typescript.
-- `build:watch`: build and watch typescript for changes.
-- `test`: run all tests and generate code coverage.
-- `test:watch`: run and watch tests for changes (with [typeahead](https://www.npmjs.com/package/jest-watch-typeahead) feature)
-  `ci:test` task that is executed by continuous integration provider (CircleCI) runs tests and uploads code coverage.
-- `format`: format all files with [prettier](https://prettier.io) (`tests` and `src` directories).
+As you can see it's just a simple function to insert items into an array and return a new (shallow) copy of the array with the new items.
 
-- `fix:src`: run ESLint on `src` directory with `--fix` flag.
-- `fix:tests`: run ESLint on `tests` directory with `--fix` flag.
-- `fix`: run `fix:src` and `fix:tests` task in parallel.
-- `docs`: generate typescript documentation via [typedoc](https://typedoc.org)
+You can choose to **replace** the item at `index` or you can just **move** the old item to the right of the new items (`index+1`).
 
-### Continous Integration
+## Installation and Usage
 
-[CircleCI](https://circleci.com/) is used for continuous integration.
+```bash
+npm install insert-items-immutable
+```
 
-Tests are run for node versions 8, 10 and 12.
+```js
+const insertIntoArray = require('insert-items-immutable')
+//or
+import { insertIntoArray } from 'insert-items-immutable'
 
-CircleCI is also set up to upload code coverage to [codecov.io](https://codecov.io) however you can also use [coveralls](https://coveralls.io) for code coverage ( it's currently commented out).
+const original = [1, 2, 3, 4]
 
-### Git Hooks
+// insert char 'A' at index 2 (replacing the 3)
+insertIntoArray(original, 2, 'A')
+//[1, 2, 'A', 4]
 
-There is one git hook setup via [husky](https://www.npmjs.com/package/husky) package in combination with [lint-staged](https://www.npmjs.com/package/lint-staged). Before committing the files all staged files will be run through ESLint and Prettier.
+// insert multiple items starting at index 2
+insertIntoArray(original, 2, ['A', 'B', 'C'])
+//[1, 2, 'A', 'B', 'C', 4]
 
-### Debugging
+// insert at index 2 but DON'T  replace index element
+insertIntoArray(original, 2, 'A', false)
+//[1, 2, 'A', 3, 4]
 
-If you are using VS Code as your editor,
-there is one debug configuration which is set up to debug currently focused test file inside the editor.
+// insert multiple items at index 2 but DON'T replace index element
+insertIntoArray(original, 2, ['A', 'B', 'C'], false)
+//[1, 2, 'A', 'B', 'C', 3, 4]
+```
 
-### Typescript Documentation Generator
+ES5 compatible.
 
-Typescript documentation is generated via [typedoc](https://typedoc.org).
-Currently, it is set up to go into `docs/api` directory and it is generated in markdown so it can be displayed on Github.
+### API docs
 
-- Private members are excluded.
-- Only exported properties are documented.
+`insert-items-immutable` is written in TypeScript, [auto generated API docs](/docs/api/modules/_index_.md) are available.
+
+#### Author
+
+- **Ivan Vlatković**
+
+##### License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details

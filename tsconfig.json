@@ -3,7 +3,7 @@
     "incremental": true,
     "tsBuildInfoFile": "./.buildcache/lib.tsbuildinfo",
     "declaration": true,
-    "target": "es6",
+    "target": "es5",
     "module": "commonjs",
     "strict": true,
     "esModuleInterop": true,
