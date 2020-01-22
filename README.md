@@ -1,9 +1,8 @@
 # Insert Items Immutable
 
-[![CircleCI](https://img.shields.io/circleci/build/github/ivandotv/insert-array-immutable
-/master)](https://circleci.com/gh/ivandotv/jme)
+[![CircleCI](https://img.shields.io/circleci/build/github/ivandotv/insert-array-immutable/master)](https://circleci.com/gh/ivandotv/insert-array-immutable)
 [![Codecov](https://img.shields.io/codecov/c/github/ivandotv/insert-array-immutable)](https://codecov.io/gh/ivandotv/insert-array-immutable)
-[![NPM](https://img.shields.io/npm/l/insert-array-immutable)](https://www.npmjs.com/package/insert-array-immutable)
+![GitHub](https://img.shields.io/github/license/ivandotv/insert-array-immutable)
 
 ## Why You Might Need This
 
