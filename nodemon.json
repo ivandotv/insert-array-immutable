@@ -1,0 +1,5 @@
+{
+  "verbose": true,
+  "watch": ["lib"],
+  "ignore": ["lib/*.d.ts", "lib/*.map.js"]
+}
