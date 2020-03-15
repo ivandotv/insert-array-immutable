@@ -78,7 +78,7 @@
     "prettier": "^1.19.1",
     "standardx": "^5.0.0",
     "ts-jest": "^24.3.0",
-    "typedoc": "^0.16.8",
+    "typedoc": "^0.17.0",
     "typedoc-plugin-markdown": "^2.2.16",
     "typescript": "^3.7.5"
   },
