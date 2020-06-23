@@ -2,7 +2,7 @@
   "name": "insert-array-immutable",
   "version": "1.0.2",
   "private": false,
-  "description": "",
+  "description": "Insert Array Elements at Index - Immutable Style",
   "main": "lib/index.js",
   "types": "lib/",
   "files": [
