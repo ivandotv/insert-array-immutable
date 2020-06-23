@@ -1,4 +1,4 @@
-# Insert Items at Index - Immutable Style
+# Insert Array Elements at Index - Immutable Style
 
 [![CircleCI](https://img.shields.io/circleci/build/github/ivandotv/insert-array-immutable/master)](https://circleci.com/gh/ivandotv/insert-array-immutable)
 [![Codecov](https://img.shields.io/codecov/c/github/ivandotv/insert-array-immutable)](https://codecov.io/gh/ivandotv/insert-array-immutable)
