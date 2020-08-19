@@ -41,6 +41,7 @@
     "array replace"
   ],
   "author": "Ivan Vlatkovic",
+  "licence":"MIT",
   "jest-junit": {
     "outputDirectory": "./reports/junit",
     "outputName": "test-results.xml"
