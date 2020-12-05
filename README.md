@@ -38,7 +38,8 @@ As you can see it's just a simple function to insert items into an array and ret
 
 You can choose to **replace** the item at `index` or you can just **move** the old item to the right of the new items (`index+1`).
 
-**Or you can just star using [immer](https://github.com/immerjs/immer) for all your immutable needs.**
+**Or you can start using [immer](https://github.com/immerjs/immer) for all your immutable needs.**
+
 ## Installation and Usage
 
 ```bash
