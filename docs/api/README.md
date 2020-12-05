@@ -1,10 +1,10 @@
-[insert-array-immutable](README.md)
+**insert-array-immutable**
 
-# insert-array-immutable
+# Globals
 
 ## Index
 
-### External modules
+### Modules
 
 * ["index"](modules/_index_.md)
 * ["insertIntoArray"](modules/_insertintoarray_.md)

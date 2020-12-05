@@ -1,6 +1,8 @@
-[insert-array-immutable](../README.md) › ["index"](_index_.md)
+**insert-array-immutable**
 
-# External module: "index"
+[Globals](../README.md) / "index"
+
+# Module: "index"
 
 ## Index
 
@@ -10,6 +12,6 @@
 
 ## References
 
-###  insertIntoArray
+### insertIntoArray
 
-• **insertIntoArray**:
+Re-exports: [insertIntoArray](_insertintoarray_.md#insertintoarray)

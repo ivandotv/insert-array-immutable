@@ -1,6 +1,8 @@
-[insert-array-immutable](../README.md) › ["insertIntoArray"](_insertintoarray_.md)
+**insert-array-immutable**
 
-# External module: "insertIntoArray"
+[Globals](../README.md) / "insertIntoArray"
+
+# Module: "insertIntoArray"
 
 ## Index
 
@@ -10,29 +12,27 @@
 
 ## Functions
 
-###  insertIntoArray
+### insertIntoArray
 
-▸ **insertIntoArray**<**T**>(`source`: T[], `index`: number, `items`: any | any[], `replaceAtIndex`: boolean): *any[]*
+▸ **insertIntoArray**\<T>(`source`: T[], `index`: number, `items`: any \| any[], `replaceAtIndex`: boolean): any[]
 
-*Defined in [insertIntoArray.ts:11](https://github.com/ivandotv/insert-array-immutable/blob/4c9cfc2/src/insertIntoArray.ts#L11)*
+*Defined in [insertIntoArray.ts:11](https://github.com/ivandotv/insert-array-immutable/blob/ce32f64/src/insertIntoArray.ts#L11)*
 
 Create and return a shallow copy of the original array with new items inserted at index.
 
-**`template`** T
+#### Type parameters:
 
-**Type parameters:**
+Name |
+------ |
+`T` |
 
-▪ **T**
+#### Parameters:
 
-**Parameters:**
-
-Name | Type | Default | Description |
+Name | Type | Default value | Description |
 ------ | ------ | ------ | ------ |
 `source` | T[] | - | array to be used as a source |
 `index` | number | - | index at which to begin adding new items |
-`items` | any &#124; any[] | - | single item or array of items to add |
+`items` | any \| any[] | - | single item or array of items to add |
 `replaceAtIndex` | boolean | true | if true item at index will be replaced, if false item at index will be moved after the new items. |
 
-**Returns:** *any[]*
-
-into array new array
+**Returns:** any[]
