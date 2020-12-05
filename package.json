@@ -1,6 +1,6 @@
 {
   "name": "insert-array-immutable",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "description": "Insert Array Elements at Index - Immutable Style",
   "main": "lib/index.js",
@@ -41,7 +41,7 @@
     "array replace"
   ],
   "author": "Ivan Vlatkovic",
-  "licence":"MIT",
+  "licence": "MIT",
   "jest-junit": {
     "outputDirectory": "./reports/junit",
     "outputName": "test-results.xml"
